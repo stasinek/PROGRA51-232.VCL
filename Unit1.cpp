@@ -116,6 +116,7 @@ if (Flash51->FLASH < Flash51->plik.Size)
    }
 else
    {
+    
     Form2->ShowModal();
    }
 }
@@ -171,24 +172,12 @@ StatusBar1->SimpleText = "Programmer RESET!";
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TForm1::Edit2Change(TObject *Sender)
-{
-Flash51->port.Post(0, &Edit2->Text.c_str()[strlen(Edit2->Text.c_str())-1], 1);
-char buff;
-Flash51->port.Read(0, &buff, 1);
-Edit3->Text = Edit3->Text + (String)buff;
-}
-//---------------------------------------------------------------------------
 
-void __fastcall TForm1::Edit3Enter(TObject *Sender)
-{
-Edit3->Text = "";        
-}
-//---------------------------------------------------------------------------
 
 void __fastcall TForm1::SpeedButton7Click(TObject *Sender)
 {
 AboutForm->ShowModal();    
 }
 //---------------------------------------------------------------------------
+
 

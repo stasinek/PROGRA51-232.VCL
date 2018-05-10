@@ -22,19 +22,14 @@ __published:	// IDE-managed Components
         TMenuItem *Zamknij1;
         TMenuItem *Zamknij2;
         TMenuItem *hghh1;
-        TMenuItem *Doczplik1;
         TStringGrid *StringGrid1;
         TPopupMenu *PopupMenu1;
         TMenuItem *Kopiuj1;
-        TMenuItem *Wklej1;
         TMenuItem *Zastpkopi1;
         TMenuItem *N1;
         TMenuItem *Przenietu1;
-        TMenuItem *N2;
         TMenuItem *Zapenijwartoci1;
-        TMenuItem *Usuzaznaczenie1;
         TStatusBar *StatusBar1;
-        TMenuItem *Zastpobszar1;
         void __fastcall FormShow(TObject *Sender);
         void __fastcall StringGrid1SetEditText(TObject *Sender, int ACol,
           int ARow, const AnsiString Value);

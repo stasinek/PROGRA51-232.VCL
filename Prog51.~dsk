@@ -26,7 +26,7 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[D:\stasiek\My Projects\OBSOLETE\PACKAGES\ProjectGroup1.bpg]
+[D:\stasiek\My Projects\OBSOLETE\PROGS\PROGA51-232.VCL\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
@@ -51,9 +51,9 @@ ClientWidth=1280
 ClientHeight=649
 LeftPanelSize=0
 RightPanelSize=0
-BottomPanelSize=0
+BottomPanelSize=85
 BottomPanelClients=MessageView@EditWindow0
-BottomPanelData=00000400010000000B0000004D657373616765566965775500000000000000000005000000000000FFFFFFFF
+BottomPanelData=000004000000000055000000000000000000050000000000000100000000550000000B0000004D65737361676556696577FFFFFFFF
 
 [View0]
 Module=D:\stasiek\My Projects\OBSOLETE\PROGS\PROGA51-232.VCL\Prog51.cpp
@@ -64,9 +64,9 @@ LeftCol=1
 
 [View1]
 Module=D:\stasiek\My Projects\OBSOLETE\PROGS\PROGA51-232.VCL\Unit1.cpp
-CursorX=1
-CursorY=1
-TopLine=1
+CursorX=6
+CursorY=42
+TopLine=25
 LeftCol=1
 
 [Watches]
@@ -163,7 +163,7 @@ ShowStatusBar=1
 
 [MessageView@EditWindow0]
 Create=1
-Visible=0
+Visible=1
 State=0
 Left=12
 Top=0

@@ -50,7 +50,7 @@ Handle = CreateFile(strcpy(this->Path, PathToSet),GENERIC_READ|GENERIC_WRITE,0,N
 if (Handle==INVALID_HANDLE_VALUE)
    {return false;
    }
-if (strstr(this->Path," \\\\.\\COM")!=NULL)
+if (strstr(this->Path,"\\\\.\\COM")!=NULL)
    {
     DCB CommDCB;
     COMMTIMEOUTS TimeOuts;
@@ -375,7 +375,7 @@ FormatMessage(FORMAT_MESSAGE_FROM_SYSTEM,
               NULL,GetLastError(),
               MAKELANGID(LANG_NEUTRAL,SUBLANG_DEFAULT),
               &lpMsgBuf[0],sizeof(lpMsgBuf),NULL);
-return MessageBox(NULL,lpMsgBuf,"TSoft \"Programator AT89Cx051\"",
+return MessageBox(NULL,lpMsgBuf,"SSTSOFT.pl \"Programator AT89Cx051\"",
                   MB_OK|MB_ICONERROR|MB_APPLMODAL);
 }
 //---------------------------------------------------------------------------

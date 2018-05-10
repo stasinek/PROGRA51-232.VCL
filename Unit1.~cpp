@@ -27,9 +27,10 @@ return brParam;
 
 void __fastcall TForm1::FormCreate(TObject *Sender)
 {
+int i, s, x;
 char name[256];
 strcpy(name,GetCommandLine());
-for (int i = 0, x = 0, s = strlen(name); i < s; i++)
+for (i = 0, x = 0, s = strlen(name); i < s; i++)
     {if (name[i]=='\"')
         {if (x==3) break;
          x++;
@@ -38,7 +39,7 @@ for (int i = 0, x = 0, s = strlen(name); i < s; i++)
          i=0;
         }
     }
-for (int s = strlen(name), i = s; i >=0; i--)
+for (s = strlen(name), i = s; i >=0; i--)
     {if (name[i]=='\"')
         {name[i] ='\0';
         }
@@ -170,24 +171,12 @@ StatusBar1->SimpleText = "Programmer RESET!";
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TForm1::Edit2Change(TObject *Sender)
-{
-Flash51->port.Post(0, &Edit2->Text.c_str()[strlen(Edit2->Text.c_str())-1], 1);
-char buff;
-Flash51->port.Read(0, &buff, 1);
-Edit3->Text = Edit3->Text + (String)buff;
-}
-//---------------------------------------------------------------------------
 
-void __fastcall TForm1::Edit3Enter(TObject *Sender)
-{
-Edit3->Text = "";        
-}
-//---------------------------------------------------------------------------
 
 void __fastcall TForm1::SpeedButton7Click(TObject *Sender)
 {
 AboutForm->ShowModal();    
 }
 //---------------------------------------------------------------------------
+
 

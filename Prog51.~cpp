@@ -14,7 +14,7 @@ WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR lpszCmdLine, int)
 {
         try
         {
-        __int32 com = Flash51->port.Open(" \\\\.\\COM1:");
+        __int32 com = Flash51->port.Open("\\\\.\\COM1:");
             Application->Initialize();
             Application->Title = "Programator AT89Cx051 - SSTSOFT.pl";
          Application->CreateForm(__classid(TForm1), &Form1);

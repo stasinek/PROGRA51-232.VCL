@@ -108,7 +108,7 @@ Item2=C:\Moje dokumenty\Moja elektronika\BASCOM\ATMEL-51\TSOFT.BIN
 DebugSourceDirs=$(BCB)\source\vcl
 
 [Parameters]
-RunParams=&quot;D:\My Project\BASCOM_51\MIERNIK-12-FRESH300TTL.BIN&quot;
+RunParams=
 HostApplication=
 RemoteHost=
 RemotePath=

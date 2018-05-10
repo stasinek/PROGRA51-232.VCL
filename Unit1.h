@@ -27,15 +27,13 @@ __published:	// IDE-managed Components
         TBitBtn *BitBtn3;
         TComboBox *ComboBox2;
         TSpeedButton *SpeedButton2;
-        TEdit *Edit2;
-        TEdit *Edit3;
         TSpeedButton *SpeedButton3;
         TSpeedButton *SpeedButton4;
         TSpeedButton *SpeedButton5;
         TStatusBar *StatusBar1;
-    TSpeedButton *SpeedButton1;
     TSpeedButton *SpeedButton6;
     TSpeedButton *SpeedButton7;
+    TListBox *ListBox1;
         void __fastcall FormCreate(TObject *Sender);
         void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
         void __fastcall BitBtn1Click(TObject *Sender);
@@ -45,12 +43,10 @@ __published:	// IDE-managed Components
         void __fastcall ComboBox2Change(TObject *Sender);
         void __fastcall SpeedButton1Click(TObject *Sender);
         void __fastcall SpeedButton2Click(TObject *Sender);
-        void __fastcall Edit2Change(TObject *Sender);
         void __fastcall SpeedButton3Click(TObject *Sender);
         void __fastcall SpeedButton4Click(TObject *Sender);
         void __fastcall SpeedButton5Click(TObject *Sender);
         void __fastcall SpeedButton6Click(TObject *Sender);
-        void __fastcall Edit3Enter(TObject *Sender);
     void __fastcall SpeedButton7Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations

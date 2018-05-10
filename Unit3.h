@@ -18,11 +18,7 @@ __published:	// IDE-managed Components
         TPanel *Panel1;
         TButton *Button1;
         TMainMenu *MainMenu1;
-        TMenuItem *Plik1;
         TMenuItem *Zamknij1;
-        TMenuItem *Zamknij2;
-        TMenuItem *hghh1;
-        TMenuItem *Doczplik1;
         TStringGrid *StringGrid1;
         TPopupMenu *PopupMenu1;
         TMenuItem *Kopiuj1;
@@ -31,7 +27,6 @@ __published:	// IDE-managed Components
         TMenuItem *Przenietu1;
         TMenuItem *Zapenijwartoci1;
         TStatusBar *StatusBar1;
-        TMenuItem *Zastpobszar1;
         void __fastcall FormShow(TObject *Sender);
         void __fastcall StringGrid1SetEditText(TObject *Sender, int ACol,
           int ARow, const AnsiString Value);
@@ -55,6 +50,7 @@ __published:	// IDE-managed Components
         void __fastcall StringGrid1MouseDown(TObject *Sender,
           TMouseButton Button, TShiftState Shift, int X, int Y);
         void __fastcall Zamknij1Click(TObject *Sender);
+    void __fastcall Button1Click(TObject *Sender);
 private:	// User declarations
 unsigned char IntGrid_Calosc[18][1024], IntGrid_Selection[18][1024]; int SelectionLeft, SelectionRight, SelectionTop, SelectionBottom, EditedCellX, EditedCellY; String EditedCellString;
 

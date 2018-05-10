@@ -32,8 +32,8 @@
     <WARNOPTSTR value=""/>
   </MACROS>
   <OPTIONS>
-    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -Tkh30000 -fp -ff -X- -ps -a8 -6 
-      -b- -k -y -v -vi- -c -tW -tWM"/>
+    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -Tkh30000 -VF -C -fp -ff -X- -ps 
+      -a8 -6 -b- -k -y -v -vi- -c -tW -tWM"/>
     <CFLAG2 value=""/>
     <CFLAG3 value=""/>
     <PFLAGS value="-$YD -$W -$T -$R -$Q -$B -$A8 -v -M -JPHNE"/>

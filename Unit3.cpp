@@ -30,11 +30,6 @@ if (Flash51->plik.Handle==INVALID_HANDLE_VALUE)
     Flash51->OnError(0);
     return;
    }
-if (Flash51->port.Handle==INVALID_HANDLE_VALUE)
-   {
-    Flash51->OnError(0);
-    return;
-   }
 for (int X = 1; X <= 16; X++)
     {
      StringGrid1->Cells[X][0] = String::IntToHex(X-1,2);
@@ -124,13 +119,14 @@ StringGrid1KeyPress(Sender, 13);
 
 void __fastcall TForm2::UpdateFileToGrid_Line(int Y)
 {
+int X;
 StringGrid1->RowCount = Y + 1;
 
-for (int X = 1; X <= 16; X++)
+for (X = 1; X <= 16; X++)
     {
      IntGrid_Calosc[X-1][Y-1] = 0xFF;
     }
-for (int X = 1; X <= 16 ? (Y-1)*16 + (X-1) < Flash51->plik.Size : false; X++)
+for (X = 1; X <= 16 ? (Y-1)*16 + (X-1) < Flash51->plik.Size : false; X++)
     {
      IntGrid_Calosc[X-1][Y-1] = Flash51->plik.Bufor[(Y-1)*16 + X-1];
     }
@@ -138,7 +134,7 @@ for (int X = 1; X <= 16 ? (Y-1)*16 + (X-1) < Flash51->plik.Size : false; X++)
 
 StringGrid1->Cells[0][Y] = String::IntToHex(Y-1,3);
 
-for (int X = 1; X <= 16; X++)
+for (X = 1; X <= 16; X++)
     {
      StringGrid1->Cells[X][Y] = String::IntToHex(IntGrid_Calosc[X-1][Y-1],2);
     }
@@ -147,11 +143,13 @@ for (int X = 1; X <= 16; X++)
 
 void __fastcall TForm2::UpdateGridToFile_Line(int Y)
 {
-for (int X = 1; X <= 16; X++)
+int X;
+
+for (X = 1; X <= 16; X++)
     {
      IntGrid_Calosc[X-1][Y-1] = StrToIntDef("0x" + StringGrid1->Cells[X][Y],0x00);
     }
-for (int X = 1; X <= 16; X++)
+for (X = 1; X <= 16; X++)
     {
      Flash51->plik.Bufor[(Y-1)*16 + (X-1)] = IntGrid_Calosc[X-1][Y-1];
     }
@@ -161,9 +159,10 @@ Flash51->plik.Save();
 
 void __fastcall TForm2::UpdateGridToList_Line(int Y)
 {
+int X;
 StringGrid1->Cells[17][Y] = "";
 
-for (int X = 1; X <= 16; X++)
+for (X = 1; X <= 16; X++)
     {
      if (StrToIntDef("0x" + Form2->StringGrid1->Cells[X][Y],0xFF)!=0)
         {
@@ -191,6 +190,7 @@ StringGrid1->Options << goEditing;
 
 void __fastcall TForm2::Kopiuj1Click(TObject *Sender)
 {
+int Y,X;
 if (Form2->StringGrid1->Selection.Top == 17) return;
 
 SelectionLeft   = Form2->StringGrid1->Selection.Left;
@@ -198,22 +198,24 @@ SelectionRight  = Form2->StringGrid1->Selection.Right;
 SelectionTop    = Form2->StringGrid1->Selection.Top;
 SelectionBottom = Form2->StringGrid1->Selection.Bottom;
 
-for (int Y = SelectionTop; Y <= SelectionBottom; Y++)
+for (Y = SelectionTop; Y <= SelectionBottom; Y++)
     {
-     for (int X = SelectionLeft; X <= SelectionRight; X++)
+     for (X = SelectionLeft; X <= SelectionRight; X++)
          {
           IntGrid_Selection[X-1][Y-1] = StrToIntDef("0x" + Form2->StringGrid1->Cells[X][Y],0xFF);
          }
     }
 StatusBar1->Panels->Items[0]->Text = "Zaznaczenie w buforze = " + String((SelectionRight - SelectionLeft + 1)*(SelectionBottom - SelectionTop + 1)) + " Bajt";
 
-Zastpobszar1->Enabled = true;
+//Zastpobszar1->Enabled = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm2::Zastpkopi1Click(TObject *Sender)
 {
-for (int Y = Form2->StringGrid1->Selection.Top, SelectionY = SelectionTop, X = Form2->StringGrid1->Selection.Left, SelectionX = SelectionLeft; SelectionY <= SelectionBottom; )
+int X,Y, SelectionY,SelectionX;
+
+for (Y = Form2->StringGrid1->Selection.Top, SelectionY = SelectionTop, X = Form2->StringGrid1->Selection.Left, SelectionX = SelectionLeft; SelectionY <= SelectionBottom; )
     {
      for (; SelectionX <= SelectionRight; SelectionX++)
          {
@@ -230,7 +232,9 @@ for (int Y = Form2->StringGrid1->Selection.Top, SelectionY = SelectionTop, X = F
 
 void __fastcall TForm2::Przenietu1Click(TObject *Sender)
 {
-for (int Y = Form2->StringGrid1->Selection.Top, SelectionY = SelectionTop, X = Form2->StringGrid1->Selection.Left, SelectionX = SelectionLeft; SelectionY <= SelectionBottom; )
+int X,Y,SelectionX,SelectionY;
+
+for (Y = Form2->StringGrid1->Selection.Top, SelectionY = SelectionTop, X = Form2->StringGrid1->Selection.Left, SelectionX = SelectionLeft; SelectionY <= SelectionBottom; )
     {
      for (; SelectionX <= SelectionRight; SelectionX++)
          {
@@ -248,7 +252,9 @@ for (int Y = Form2->StringGrid1->Selection.Top, SelectionY = SelectionTop, X = F
 
 void __fastcall TForm2::Usuzaznaczenie1Click(TObject *Sender)
 {
-for (int Y = Form2->StringGrid1->Selection.Top, DelY = Y, X = Form2->StringGrid1->Selection.Right, DelX = Form2->StringGrid1->Selection.Left; Y <= Form2->StringGrid1->RowCount; )
+int X,Y,DelX,DelY;
+
+for (Y = Form2->StringGrid1->Selection.Top, DelY = Y, X = Form2->StringGrid1->Selection.Right, DelX = Form2->StringGrid1->Selection.Left; Y <= Form2->StringGrid1->RowCount; )
     {
      for (; X <= 16; X++)
          {
@@ -267,7 +273,9 @@ for (int Y = Form2->StringGrid1->Selection.Top, DelY = Y, X = Form2->StringGrid1
 
 void __fastcall TForm2::Wklej1Click(TObject *Sender)
 {
-for (int Y = Form2->StringGrid1->Selection.Top, DelY = Y, X = Form2->StringGrid1->Selection.Right, DelX = Form2->StringGrid1->Selection.Left; Y <= Form2->StringGrid1->RowCount; )
+int X,Y,DelX,DelY;
+
+for (Y = Form2->StringGrid1->Selection.Top, DelY = Y, X = Form2->StringGrid1->Selection.Right, DelX = Form2->StringGrid1->Selection.Left; Y <= Form2->StringGrid1->RowCount; )
     {
      for (; X <= 16; X++)
          {
@@ -286,11 +294,13 @@ for (int Y = Form2->StringGrid1->Selection.Top, DelY = Y, X = Form2->StringGrid1
 
 void __fastcall TForm2::Zapenijwartoci1Click(TObject *Sender)
 {
+int X,Y;
+
 if (Form5->ShowModal()==mrOk)
 {
-for (int Y = Form2->StringGrid1->Selection.Top; Y <= Form2->StringGrid1->Selection.Bottom; Y++)
+for (Y = Form2->StringGrid1->Selection.Top; Y <= Form2->StringGrid1->Selection.Bottom; Y++)
     {
-     for (int X = Form2->StringGrid1->Selection.Left; X <= Form2->StringGrid1->Selection.Right && X <= 16; X++)
+     for (X = Form2->StringGrid1->Selection.Left; X <= Form2->StringGrid1->Selection.Right && X <= 16; X++)
          {
           Form2->StringGrid1->Cells[X][Y] = String::IntToHex(StrToIntDef("0x" + Form5->MaskEdit1->Text,0xFF),2);
          }
@@ -331,6 +341,13 @@ for (int Y = 1; Y <= Flash51->FLASH/16 ; Y++)
   {
    UpdateGridToFile_Line(Y);
   }
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm2::Button1Click(TObject *Sender)
+{
+Close();    
 }
 //---------------------------------------------------------------------------
 
