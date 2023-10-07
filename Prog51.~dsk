@@ -1,48 +1,58 @@
-[Closed Files]
-File_0=SourceModule,'D:\My Documents\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Core.h',0,1,1,51,8,0,0
-File_1=SourceModule,'D:\My Documents\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Main_frm.cpp',0,1,676,1,680,1,0
-File_2=SourceModule,'D:\My Documents\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Unit4.cpp',0,1,1,1,1,1,0
-File_3=SourceModule,'D:\My Documents\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Unit5.cpp',0,1,1,96,17,1,0
-File_4=SourceModule,'D:\My Documents\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Unit1.cpp',0,1,146,1,164,1,0
-File_5=SourceModule,'D:\My Documents\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Unit3.cpp',0,1,13,55,20,1,0
-File_6=SourceModule,'D:\My Documents\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Unit2.cpp',0,1,1,1,1,0,0
-File_7=SourceModule,'D:\My Documents\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Core.cpp',0,1,1,1,1,0,0
-File_8=SourceModule,'D:\My Projects\aktualne_prc++\OBSOLETE_BCB\PROGS\Panel\Core.cpp',0,1,1,1,1,0,0
-File_9=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\Panel\Core.cpp',0,1,1,1,1,0,0
-
 [Modules]
-Module0=D:\stasiek\My Projects\OBSOLETE\PROGS\PROGA51-232.VCL\Unit1.cpp
-Module1=D:\stasiek\My Projects\OBSOLETE\PROGS\PROGA51-232.VCL\Prog51.bpr
-Count=2
+Module0=C:\SRC\OBSOLETE\FORM_TEMPLATES\About_frm.cpp
+Module1=C:\SRC\OBSOLETE\PROGS\PROGA51-232.VCL\Unit1.cpp
+Module2=C:\SRC\OBSOLETE\PROGS\PROGA51-232.VCL\Unit3.cpp
+Module3=C:\SRC\OBSOLETE\PROGS\PROGA51-232.VCL\Prog51.bpr
+Module4=C:\SRC\OBSOLETE\PACKAGES\SYSTRAY.h
+Count=5
 EditWindowCount=1
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\PROGA51-232.VCL\Unit1.cpp]
+[C:\SRC\OBSOLETE\FORM_TEMPLATES\About_frm.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\SRC\OBSOLETE\PROGS\PROGA51-232.VCL\Unit1.cpp]
 ModuleType=SourceModule
 FormState=1
 FormOnTop=0
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\PROGA51-232.VCL\Prog51.bpr]
+[C:\SRC\OBSOLETE\PROGS\PROGA51-232.VCL\Unit3.cpp]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\PROGA51-232.VCL\ProjectGroup1.bpg]
+[C:\SRC\OBSOLETE\PROGS\PROGA51-232.VCL\Prog51.bpr]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\SRC\OBSOLETE\PACKAGES\SYSTRAY.h]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\SRC\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=2
-CurrentView=1
+ViewCount=6
+CurrentView=5
 View0=0
 View1=1
+View2=2
+View3=3
+View4=4
+View5=5
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
 State=2
-Left=199
-Top=229
-Width=1081
-Height=482
+Left=256
+Top=125
+Width=1024
+Height=502
 MaxLeft=-4
 MaxTop=100
 MaxWidth=1288
@@ -51,22 +61,50 @@ ClientWidth=1280
 ClientHeight=649
 LeftPanelSize=0
 RightPanelSize=0
-BottomPanelSize=85
+BottomPanelSize=52
 BottomPanelClients=MessageView@EditWindow0
-BottomPanelData=000004000000000055000000000000000000050000000000000100000000550000000B0000004D65737361676556696577FFFFFFFF
+BottomPanelData=000004000000000000000000000000000000000000000000000100000000000000000B0000004D65737361676556696577FFFFFFFF
 
 [View0]
-Module=D:\stasiek\My Projects\OBSOLETE\PROGS\PROGA51-232.VCL\Prog51.cpp
+Module=C:\SRC\OBSOLETE\PACKAGES\SYSTRAY.h
 CursorX=1
 CursorY=1
 TopLine=1
 LeftCol=1
 
 [View1]
-Module=D:\stasiek\My Projects\OBSOLETE\PROGS\PROGA51-232.VCL\Unit1.cpp
-CursorX=6
-CursorY=42
-TopLine=25
+Module=C:\SRC\OBSOLETE\PROGS\PROGA51-232.VCL\Prog51.cpp
+CursorX=19
+CursorY=26
+TopLine=1
+LeftCol=1
+
+[View2]
+Module=C:\SRC\OBSOLETE\PROGS\PROGA51-232.VCL\Unit3.cpp
+CursorX=33
+CursorY=84
+TopLine=64
+LeftCol=1
+
+[View3]
+Module=C:\SRC\OBSOLETE\PROGS\PROGA51-232.VCL\Unit1.cpp
+CursorX=107
+CursorY=18
+TopLine=81
+LeftCol=1
+
+[View4]
+Module=C:\SRC\OBSOLETE\FORM_TEMPLATES\About_frm.cpp
+CursorX=23
+CursorY=6
+TopLine=1
+LeftCol=1
+
+[View5]
+Module=C:\SRC\OBSOLETE\FORM_TEMPLATES\About_frm.h
+CursorX=1
+CursorY=10
+TopLine=1
 LeftCol=1
 
 [Watches]
@@ -81,21 +119,19 @@ Count=0
 [Main Window]
 Create=1
 Visible=1
-State=2
+State=0
 Left=9
 Top=15
 Width=1271
 Height=105
 MaxLeft=-1
 MaxTop=-1
-MaxWidth=1288
-MaxHeight=105
-ClientWidth=1280
+ClientWidth=1263
 ClientHeight=78
 
 [ProjectManager]
 Create=1
-Visible=1
+Visible=0
 State=0
 Left=369
 Top=372
@@ -141,10 +177,10 @@ ClientHeight=60
 
 [PropertyInspector]
 Create=1
-Visible=1
+Visible=0
 State=0
-Left=0
-Top=359
+Left=56
+Top=179
 Width=190
 Height=381
 MaxLeft=-1
@@ -154,12 +190,28 @@ ClientHeight=355
 TBDockHeight=381
 LRDockWidth=190
 Dockable=1
-SplitPos=85
+SplitPos=88
 ArrangeBy=Name
-SelectedItem=Font.Style.fsBold
+SelectedItem=Caption
 ExpandedItems=Font,Font.Style
 HiddenCategories=
 ShowStatusBar=1
+
+[CallStackWindow]
+Create=1
+Visible=0
+State=0
+Left=493
+Top=319
+Width=294
+Height=161
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=286
+ClientHeight=137
+TBDockHeight=161
+LRDockWidth=294
+Dockable=1
 
 [MessageView@EditWindow0]
 Create=1
@@ -168,12 +220,12 @@ State=0
 Left=12
 Top=0
 Width=1268
-Height=85
+Height=52
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1268
-ClientHeight=85
-TBDockHeight=85
+ClientHeight=52
+TBDockHeight=52
 LRDockWidth=443
 Dockable=1
 

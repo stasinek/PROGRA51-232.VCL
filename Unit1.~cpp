@@ -116,6 +116,7 @@ if (Flash51->FLASH < Flash51->plik.Size)
    }
 else
    {
+    
     Form2->ShowModal();
    }
 }

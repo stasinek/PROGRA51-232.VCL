@@ -82,7 +82,6 @@ void __fastcall TForm2::StringGrid1SelectCell(TObject *Sender, int ACol,
       int ARow, bool &CanSelect)
 {
 StringGrid1KeyPress(Sender, 13);
-
 EditedCellX = ACol; EditedCellY = ARow; EditedCellString = StringGrid1->Cells[ACol][ARow];
 }
 //---------------------------------------------------------------------------

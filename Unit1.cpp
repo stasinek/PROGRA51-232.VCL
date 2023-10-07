@@ -176,7 +176,7 @@ StatusBar1->SimpleText = "Programmer RESET!";
 
 void __fastcall TForm1::SpeedButton7Click(TObject *Sender)
 {
-AboutForm->ShowModal();    
+About_form->ShowModal();    
 }
 //---------------------------------------------------------------------------
 

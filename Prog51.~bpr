@@ -12,8 +12,8 @@
     <RESDEPEN value="$(RESFILES) Unit1.dfm Unit3.dfm Unit4.dfm Unit5.dfm 
       ..\..\FORM_TEMPLATES\About_frm.dfm"/>
     <LIBFILES value=""/>
-    <LIBRARIES value="dclusr50.lib Vcl50.lib vcl.lib vclx.lib"/>
-    <SPARELIBS value="vclx.lib vcl.lib Vcl50.lib dclusr50.lib"/>
+    <LIBRARIES value="dclusr50.lib Vcl50.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib Vcl50.lib dclusr50.lib"/>
     <PACKAGES value="Vcl50.bpi dclusr50.bpi Vclx50.bpi bcbsmp50.bpi dclocx50.bpi 
       bcb2kaxserver50.bpi"/>
     <PATHCPP value=".;..\..\FORM_TEMPLATES"/>
@@ -32,8 +32,8 @@
     <WARNOPTSTR value=""/>
   </MACROS>
   <OPTIONS>
-    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -Tkh30000 -VF -C -fp -ff -X- -ps 
-      -a8 -6 -b- -k -y -v -vi- -c -tW -tWM"/>
+    <CFLAG1 value="-O2 -Vx -Ve -Tkh30000 -VF -C -fp -ff -X- -p -a8 -6 -b- -k -y -v -vi- -c 
+      -tW -tWM"/>
     <CFLAG2 value=""/>
     <CFLAG3 value=""/>
     <PFLAGS value="-$YD -$W -$T -$R -$Q -$B -$A8 -v -M -JPHNE"/>
@@ -108,7 +108,7 @@ Item2=C:\Moje dokumenty\Moja elektronika\BASCOM\ATMEL-51\TSOFT.BIN
 DebugSourceDirs=$(BCB)\source\vcl
 
 [Parameters]
-RunParams=&quot;D:\My Project\BASCOM_51\MIERNIK-12-FRESH300TTL.BIN&quot;
+RunParams=
 HostApplication=
 RemoteHost=
 RemotePath=
