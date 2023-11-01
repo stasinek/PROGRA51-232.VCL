@@ -12,10 +12,9 @@
     <RESDEPEN value="$(RESFILES) Unit1.dfm Unit3.dfm Unit4.dfm Unit5.dfm 
       ..\..\FORM_TEMPLATES\About_frm.dfm"/>
     <LIBFILES value=""/>
-    <LIBRARIES value="sstdcl50.lib dclusr50.lib Vcl50.lib vcl.lib"/>
-    <SPARELIBS value="vcl.lib Vcl50.lib dclusr50.lib sstdcl50.lib"/>
-    <PACKAGES value="Vcl50.bpi dclusr50.bpi Vclx50.bpi bcbsmp50.bpi dclocx50.bpi 
-      bcb2kaxserver50.bpi"/>
+    <LIBRARIES value="sstdcl50.lib Vcl50.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib Vcl50.lib sstdcl50.lib"/>
+    <PACKAGES value="Vcl50.bpi Vclx50.bpi"/>
     <PATHCPP value=".;..\..\FORM_TEMPLATES"/>
     <PATHPAS value=".;"/>
     <PATHRC value=".;"/>
@@ -54,7 +53,7 @@ AutoIncBuild=1
 MajorVer=1
 MinorVer=0
 Release=0
-Build=82
+Build=83
 Debug=0
 PreRelease=0
 Special=1
@@ -66,7 +65,7 @@ CodePage=1250
 [Version Info Keys]
 CompanyName=SSTSOFT.pl
 FileDescription=
-FileVersion=1.0.0.82
+FileVersion=1.0.0.83
 InternalName=PROG51
 LegalCopyright=
 LegalTrademarks=
@@ -74,6 +73,12 @@ OriginalFilename=
 ProductName=PROG51
 ProductVersion=1.0.0.0
 Comments=
+
+[Excluded Packages]
+$(BCB)\Projects\Bpl\dclusr50.bpl=Borland User Components
+$(BCB)\Bin\bcbsmp50.bpl=Borland C++ Sample Components
+$(BCB)\Bin\dclocx50.bpl=Borland Sample Imported ActiveX Controls
+$(BCB)\Bin\bcb2kaxserver50.bpl=Borland C++Builder COM Server Components Sample Package
 
 [HistoryLists\hlIncludePath]
 Count=8
